@@ -2,10 +2,10 @@
 title: dumyCq Blog
 SEOTitle: 常奇的博客 | dumyCq Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
-description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+email: Trynda_Chang@hotmail.com
+description: "Dream will take me for a ride as long as I am in the prime of youth."
+keyword: "dumyCq, dumy_c, CQ, dumyCq Blog, 常奇的博客, 常奇, matlab, mathwork, C++, Visual Studio 2017, signal processing, image processing, medical image processing"
+url: "http://dumyCq.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
 
