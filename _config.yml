@@ -6,14 +6,14 @@ email: Trynda_Chang@hotmail.com
 description: "Dream will take me for a ride as long as I am in the prime of youth."
 keyword: "dumyCq, dumy_c, CQ, dumyCq Blog, 常奇的博客, 常奇, matlab, mathwork, C++, Visual Studio 2017, signal processing, image processing, medical image processing"
 url: "http://dumyCq.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+#baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/dumyCq/dumyCq.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "There is no such thing as a great talent without great will-power!"
 sidebar-avatar: /img/self-photo.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-url: "http://dumyCq.github.io/about/"
+url: 'http://dumyCq.github.io/about/'
 
 
 # SNS settings
