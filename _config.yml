@@ -13,7 +13,6 @@ github_repo: "https://github.com/dumyCq/dumyCq.github.io.git" # you code reposit
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "There is no such thing as a great talent without great will-power!"
 sidebar-avatar: /img/self-photo.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-sidebar-url: /about.html
 
 # SNS settings
 RSS: false
