@@ -4,10 +4,18 @@ title: "About me and my blog"
 description: "Hey, this is CQ, dumy is for fun, and every successful work come after dummy."
 header-img: "img/dc-fangjianbei-yinghua.jpg"
 ---
+
+<!-- Language Selector -->
+<select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英文 English </option>
+</select>
+
 <!-- Chinese Version -->
+<div class="zh post-container">
 
     <!--copied from markdown -->
-    <blockquote><p>为山九仞 岂一日之功</p></blockquote>
+    <blockquote><p>为山九仞,岂一日之功</p></blockquote>
 
     <p>大家好，我是<strong>常奇(Cq)</strong>，目前在美国宾州州立大学攻读博士学位</p>
 
@@ -15,7 +23,7 @@ header-img: "img/dc-fangjianbei-yinghua.jpg"
 
     <p>
         这是我在 <a href="https://github.com/qiubaiying">柏荧</a> 的github设计基础上跟随 <a href="http://qiubaiying.top/2017/02/06/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"> 快速搭建个人博客</a>
-        这篇博文利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的个人博客。我在我的<a href="https://github.com/dumyCq">GitHub主页👉GitHub·dumyCq</a> 中有转载相关博文和引用。
+        这篇博文利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的个人博客。我在我的<a href="https://github.com/dumyCq">GitHub主页??GitHub·dumyCq</a> 中有转载相关博文和引用。
         如果有关于搭建博客以及专业方向的什么问题，欢迎提出探讨~
     </p>
 
@@ -27,6 +35,64 @@ header-img: "img/dc-fangjianbei-yinghua.jpg"
         <li><a href="http://huangxuan.me/">Hux</a></li>
         <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
     </ul>
+</div>
+
+<!-- English Version -->
+<div class="en post-container">
+    <blockquote><p>Rome is not built in one day.</p></blockquote>
+
+    <p>Hello everyone, I am <strong>Qi Chang</strong>. I am curruently a PhD. student on Penn State University.</p>
+
+    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub based on  ?? <a href="http://github.com/qiubaiying">Github·BY</a>. and his blog <a href="http://qiubaiying.top/2017/02/06/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"> how to build a blog</a></p>
+
+    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
+
+    <h5>Talks</h5>
+
+    <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+        <li><a href="https://qiubaiying.github.io">BY</a></li>
+    </ul>
+</div> -->
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+    // init
+    _render();
+</script>
+
 
 <!-- Gitalk 评论 start  -->
 {% if site.gitalk.enable %}
@@ -69,4 +135,5 @@ header-img: "img/dc-fangjianbei-yinghua.jpg"
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
+<!-- disqus 公共JS代码 end -->
 {% endif %}
